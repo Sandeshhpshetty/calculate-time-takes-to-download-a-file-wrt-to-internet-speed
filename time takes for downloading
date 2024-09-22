@@ -1,0 +1,41 @@
+# calculate download speed
+import time
+class Internet:
+    def mbspeed(self):
+        self.MB=int(input("enter the size in MB "))
+    
+    def gbspeed(self):
+        self.Gb=int(input("enter file in GB "))
+
+
+    def ispeed(self):
+        self.Mbps=int(input("enter the internet speed in mbps "))
+
+show=Internet()
+user_input=int(input("enter file size for GBps enter 1 or for MBps enter 2=="))
+if user_input==1:
+    GB=show.gbspeed()
+    GBps=show.Gb
+    print(GBps)
+    gbps=GBps*1000*8
+    print("converted to mbps",gbps)
+
+    speed=show.ispeed()
+    speed1=show.Mbps
+    timed=gbps//speed1
+    print(timed)
+    times= time.gmtime(timed)
+    print(time.strftime("%H:%M:%S", times))
+
+elif user_input==2:
+    MB=show.mbspeed()
+    Mbps=show.MB
+    print(Mbps)
+    MBPS=Mbps*8
+    print(MBPS)
+    speed=show.ispeed()
+    speed1=show.Mbps
+    timed=MBPS//speed1
+    print(timed)
+    times= time.gmtime(timed)
+    print(time.strftime("%H:%M:%S", times))
